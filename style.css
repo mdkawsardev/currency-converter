@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    background: radial-gradient(#5d6d7e, #212f3d);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & p {
+        font-size: 1.3rem;
+    }
+
+    & .container {
+        width: 35vw;
+        /* min-height: 40vh; */
+        padding: 1rem;
+        border: 1px solid #212f3d;
+        -webkit-backdrop-filter: blur(1rem);
+        backdrop-filter: blur(1rem);
+        box-shadow: 0 0 1rem #212f3d;
+        border-radius: 1rem;
+
+        & h1 {
+            text-align: center;
+        }
+
+        & form {
+            padding: 2rem;
+
+            & .dropdown {
+                margin: 3rem 0;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                & .icon i {
+                    font-size: 2rem;
+                }
+
+                & .select-container {
+
+                    & .box {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        box-shadow: 0 0 10px #5d6d7e;
+                        border-radius: 1rem;
+                    }
+
+                    & .from {}
+                }
+
+
+            }
+        }
+
+        & form input,
+        select,
+        button {
+            width: 100%;
+            height: 3rem;
+            border: 1px solid #5d6d7e;
+            outline: none;
+            background: transparent;
+            border-radius: 1rem;
+            font-size: 1rem;
+
+            &:focus {
+                border: 1px solid #212f3d;
+            }
+        }
+
+        & form input {
+            padding-left: 1rem;
+        }
+
+        & form select option {
+            text-align: center;
+            background-color: #5d6d7e;
+
+        }
+
+        & form button {
+            margin: 1rem 0;
+            background-color: #212f3d;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        & form .rate {
+            text-align: center;
+            font-size: 1.3rem;
+        }
+    }
+}
+.play-animation {
+    animation: rotate .5s linear infinite;
+    /* opacity: 1; */
+}
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.stop-animation {
+    -o-animation-play-state: paused;
+    animation-play-state: paused;
+    /* opacity: 0; */
+}
